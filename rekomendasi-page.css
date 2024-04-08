@@ -1,4 +1,4 @@
-.pb-2{
+.pb-2 {
   padding: 1vw;
 }
 .so-when-this21 {
@@ -2552,6 +2552,13 @@
     gap: 74px 295px;
   }
 }
+
+.card-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 footer {
   background-color: blanchedalmond;
 }

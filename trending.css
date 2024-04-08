@@ -800,6 +800,13 @@
     gap: 74px 295px;
   }
 }
+
+.card-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 footer {
   background-color: blanchedalmond;
 }
