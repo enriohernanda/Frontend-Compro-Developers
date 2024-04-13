@@ -1,9 +1,9 @@
-.transform-hover:hover{
+.transform-hover:hover {
   transform: scale(1.1);
   cursor: pointer;
   transition: transform 0.51s;
 }
-.pb-2{
+.pb-2 {
   padding: 1.5vw;
 }
 .page-help-child {
@@ -328,7 +328,7 @@
   max-width: 200px;
 }
 /* class  css yang tidak perlu*/
-.ifo6 { 
+.ifo6 {
   height: 172px;
   width: 500px;
   position: relative;
@@ -870,4 +870,64 @@
 
 footer {
   background-color: blanchedalmond;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  font-family: var(--font-roboto-mono);
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  font-family: var(--font-roboto-mono);
+}
+
+.icon {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.icon li {
+  margin: 0 10px;
+}
+
+.icon a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+
+.icon a:hover i {
+  color: white;
+}
+
+.footer-bottom {
+  width: 100vw;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  font-family: var(--font-roboto-mono);
 }
