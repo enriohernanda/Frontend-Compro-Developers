@@ -4,9 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Rekomendasi</title>
-    <!-- cdnjs CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- cdnjs CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
@@ -40,7 +46,7 @@
             class="home-button-when-got-click-wil27"
             id="homeButtonWhenGotClickWil2"
           >
-            <b class="so-when-this24">Bantuan</b>
+            <b class="so-when-this24">Tentang Kami</b>
           </div>
         </div>
         <button
@@ -67,168 +73,197 @@
       <section class="rekomendasi-page-inner">
         <div class="frame-parent7">
           <div class="search-engine-wrapper">
-            <div class="search-engine3">
-              <img class="vector-icon11" alt="" src="./public/vector.svg" />
-
-              <input
-                class="search-engine-inner"
-                placeholder="Selamat Datang,silakan temukan yang anda minati!"
-                type="text"
-              />
+            <div class="search-engine3" style="display: flex;padding-left: 1vw;padding: 0.3vw;align-items: center;">
+              <img class="vector-icon1" alt="" src="./public/icon-search.png" style="float: left;width: 3.5vw;height: auto;"/>
+              <input id="query" class="search-engine-inner" style="width: 31.4vw;margin: 0%;float: right;" placeholder="Selamat datang! Temukan minat Anda!" type="text" />
+              <button id="search-button" style="background-color: tomato;padding: 1vw;border-radius: 1.2vw;border: none;width: 6vw;" onclick="searchdb()">Cari</button>                  
             </div>
           </div>
-          <!-- card 1 -->
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <img src="./rekomendasi_img/rekomendasi_1.png" class="card-img-top" alt="gambar1">
-                <div class="card-body">
-                  <h5 class="card-title">Kolaborasi Anak Muda dan Teknologi, ...</h5>
-                  <p class="card-text" style="color: #616161;">Para anak muda atau sering disebut generasi millenials, berperan penting dalam kemajuan pariwisata Indonesia. Apal...</p>
-                  <a href="rm-rekomendasi1.html" class="btn btn-primary" style="background-color: #5783DB;">Selengkapnya</a>
-                </div>
-              </div>
-            </div>
-          <!-- end card 1 -->
-          
-          <!-- card 2 -->
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="./rekomendasi_img/rekomendasi_2.png" class="card-img-top" alt="gambar1">
-              <div class="card-body">
-                <h5 class="card-title">Anak Muda adalah Kelompok Produktif ...</h5>
-                <p class="card-text" style="color: #616161;">Wakil Wali Kota Batam Amsakar Achmad selalu menyempatkan hadir dalam kegiatan kepemudaan. Bukan tanpa sebab, kelompok i...</p>
-                <a href="rm-rekomendasi2.html" class="btn btn-primary text-center" style="background-color: #5783DB;">Selengkapnya</a>
+          <!-- grid card -->
+          <div class="row grid-card">
+            
+          </div>
+            <div class="notif-search" style="display: none;flex-direction: column;position: relative;align-self: center;">
+              <img src="public/not-found.png" alt="" style="width: 30vw;width: 30vw;border-top-left-radius: 1vw;border-top-right-radius: 1vw;">
+              <div style="background-color: rgba(255, 255, 255,0);width: 30vw;padding: 1vw;margin-bottom: 10vw;"> 
+                Pencarian Tidak Ditemukan Coba Kata Kunci Lainnya 
               </div>
             </div>
           </div>
-        <!-- end card 2 -->
-
-        <!-- card 3 -->
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="./rekomendasi_img/rekomendasi_3.png" class="card-img-top" alt="gambar1">
-              <div class="card-body">
-                <h5 class="card-title">Aksi Anak Muda Peduli Lingkungan, P...</h5>
-                <p class="card-text" style="color: #616161;">Saat ini sedang marak trend bersih-bersih lingkungan yang dilakukan oleh para anak muda, Pandawara Grup salah satu contohnya...</p>
-                <a href="rm-rekomendasi3.html" class="btn btn-primary justify-content-center" style="background-color: #5783DB;">Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-        <!-- end card 3 -->
-
-        <!-- card 4 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <img src="./rekomendasi_img/rekomendasi_4.png" class="card-img-top" alt="gambar1">
-            <div class="card-body">
-              <h5 class="card-title">Membangun Ekonomi Bangsa: Aksi Nya...</h5>
-              <p class="card-text" style="color: #616161;">Tak hanya itu jumlah pengangguran yang semakin banyak juga menjadi faktor dari penyebab kemiskinan semakin meningkat, ...</p>
-              <a href="rm-rekomendasi4.html" class="btn btn-primary justify-content-center" style="background-color: #5783DB;">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-      <!-- end card 4 -->
-
-      <!-- card 5 -->
-      <div class="col-md-4 mb-3">
-        <div class="card">
-          <img src="./rekomendasi_img/rekomendasi_5.png" class="card-img-top" alt="gambar1">
-          <div class="card-body">
-            <h5 class="card-title">Menjadi Anak Muda yang Produktif...</h5>
-            <p class="card-text" style="color: #616161;">Kita sebagai generasi muda yang masih berjiwa besar dan bersemangat tinggi harus mempunyai motivasi tinggi dalam hidup. Kit...</p>
-            <a href="rm-rekomendasi5.html" class="btn btn-primary justify-content-center" style="background-color: #5783DB;">Selengkapnya</a>
-          </div>
-        </div>
-      </div>
-    <!-- end card 5 -->
-
-    <!-- card 6 -->
-    <div class="col-md-4 mb-3">
-      <div class="card">
-        <img src="./rekomendasi_img/rekomendasi_6.png" class="card-img-top" alt="gambar1">
-        <div class="card-body">
-          <h5 class="card-title">Hari Gini Masih Gak Percaya Diri? Y...</h5>
-          <p class="card-text" style="color: #616161;">Kepercayaan diri adalah fondasi bagi kesuksesan dan kesejahteraan pribadi. Sebagian besar orang setuju bahwa memiliki...</p>
-          <a href="rm-rekomendasi6.html" class="btn btn-primary justify-content-center" style="background-color: #5783DB;">Selengkapnya</a>
-        </div>
-      </div>
-    </div>
-  <!-- end card 6 -->
-
-  <!-- card 7 -->
-  <div class="col-md-4 mb-3">
-    <div class="card">
-      <img src="./rekomendasi_img/rekomendasi_7.png" class="card-img-top" alt="gambar1">
-      <div class="card-body">
-        <h5 class="card-title">Kisah Thandiwe Muriu: Anak Muda, Kr...</h5>
-        <p class="card-text" style="color: #616161;">"Fotografi adalah cara saya berbicara, cara saya menyuarakan isu, dan cara saya menciptakan perubahan." -Thandiwe Muriu</p>
-        <a href="rm-rekomendasi7.html" class="btn btn-primary justify-content-center" style="background-color: #5783DB;">Selengkapnya</a>
-      </div>
-    </div>
-  </div>
-<!-- end card 7 -->
-
-<!-- card 8 -->
-<div class="col-md-4 mb-3">
-  <div class="card">
-    <img src="./rekomendasi_img/rekomendasi_8.png" class="card-img-top" alt="gambar1">
-    <div class="card-body">
-      <h5 class="card-title">Pentingnya Apresiasi di Kalangan An...</h5>
-      <p class="card-text" style="color: #616161;">Era sekarang ini, banyak lahir generasi-generasi anak muda dengan berbagai sebutan. Seperti anak milenial, gen-z, san...</p>
-      <a href="rm-rekomendasi8.html" class="btn btn-primary justify-content-center" style="background-color: #5783DB;">Selengkapnya</a>
-    </div>
-  </div>
-</div>
-<!-- end card 8 -->
-
-<!-- card 9 -->
-<div class="col-md-4 mb-3">
-<div class="card">
-  <img src="./rekomendasi_img/rekomendasi_9.png" class="card-img-top" alt="gambar1">
-  <div class="card-body">
-    <h5 class="card-title">Podcast sebagai Medium Inspiratif un...</h5>
-    <p class="card-text" style="color: #616161;">Podcast, sebagai bentuk konten audio digital, telah menjadi medium yang semakin populer di kalangan anak muda. Dengan bera...</p>
-    <a href="rm-rekomendasi9.html" class="btn btn-primary justify-content-center" style="background-color: #5783DB;">Selengkapnya</a>
-  </div>
-</div>
-</div>
-<!-- end card 9 -->
-
-<!-- card 10 -->
-<div class="col-md-4 mb-3">
-  <div class="card">
-    <img src="./rekomendasi_img/rekomendasi_10.png" class="card-img-top" alt="gambar1">
-    <div class="card-body">
-      <h5 class="card-title">Bingung Mengisi Waktu? Ini Cerita t...</h5>
-      <p class="card-text" style="color: #616161;">Pada kehidupan perkuliahan yang begitu sibuk ini, dimana membagi waktu antara perkuliahan dan kepentingan lain seringkal...</p>
-      <a href="rm-rekomendasi10.html" class="btn btn-primary justify-content-center" style="background-color: #5783DB;">Selengkapnya</a>
-    </div>
-  </div>
-  </div>
-  <!-- end card 10 -->
-        </div>
       </section>
     </div>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <h3>Youth Creativity</h3>
-        <p>Memberi informasi serta mempermudah anak muda untuk mengembangkan kreativitas mereka pada zaman sekarang.</p>
-        <ul class="icon">
-          <li><a href=""><i class="fa-solid fa-phone"></i></a></li>
-          <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-          <li><a href=""><i class="fa-solid fa-location-dot"></i></a></li>
-        </ul>
-        <div class="footer-bottom">
-          <p>Created by Compro Developers</p>
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <h3>Youth Creativity</h3>
+          <p>Memberi informasi serta mempermudah anak muda untuk mengembangkan kreativitas mereka pada zaman sekarang.</p>
+          <ul class="icon">
+            <li>
+              <a href=""><i class="fa-solid fa-phone"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-location-dot"></i></a>
+            </li>
+          </ul>
+          <div class="footer-bottom">
+            <p>Created by Compro Developers</p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
     <!-- End Footer -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+      var notifsearch = document.getElementsByClassName("notif-search")[0]
+      var query = document.getElementById("query")
+      
+
+      function pencariantidakditemukan(){
+        let frame_parent7 = document.getElementsByClassName("frame-parent7")[0]
+        frame_parent7.style.alignItems = "center"
+        notifsearch.style.display = "flex"
+        refresh()
+      }
+      function pencarianditemukan(){
+        let frame_parent7 = document.getElementsByClassName("frame-parent7")[0]
+        frame_parent7.style.alignItems = "flex-end"
+        notifsearch.style.display = "none"
+        
+      }
+      const content = document.getElementsByClassName('grid-card')[0]
+      content.innerHTML += 
+      `
+      
+      `
+      var query = document.getElementById("query")
+      query.addEventListener("keydown", function(){
+      if (event.keyCode === 13){
+          searchdb()
+          console.log("berhasil")
+      } else {
+
+      }})
+      function refresh(){
+        content.innerHTML = ""
+      }
+        function searchdb(){
+        const request = "searchdbrm";
+        const queryvalue = query.value 
+        const content = document.getElementsByClassName('grid-card')[0]
+        console.log(query.value)
+        $.ajax({
+            url : "connection.php",
+            type : "POST",
+            data : {
+                request : request,
+                query : query.value
+            },
+            success: function(response){
+                console.log(response)
+                let hasil = JSON.parse(response);
+                
+                if (hasil.status === "success"){
+                    refresh()
+                    pencarianditemukan()
+                    const arraynama = hasil["title"];
+                    const arraygambar = hasil["img"];
+                    const arrayid = hasil["id"];
+                    const arraydeskripsi = hasil["sectiontop"];
+                    console.log("berhasil lanjut")
+                    const content = document.getElementsByClassName('grid-card')[0]
+                    if (arraynama.length === 1){
+                      for (const key in arraynama){
+                        content.innerHTML += `
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img src="src/recommend/image${arrayid[key]}.png" class="card-img" style="" alt="gambar1">
+                            <div class="card-body">
+                              <h5 class="card-title">${arraynama[key].substring(0, 35)}...</h5>
+                              <p class="card-text" style="color: #616161;text-align:justify">${arraydeskripsi[key].substring(0, 120)}...</p>
+                              <a href="readmore.html?id=${arrayid[key]}&c=rm" class="btn btn-primary" style="background-color: #5783DB;">Selengkapnya</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3" style="visibility: hidden;">
+                          <div class="card">
+                            <img src="src/recommend/image${arrayid[key]}.png" class="card-img" style="" alt="gambar1">
+                            <div class="card-body">
+                              <h5 class="card-title">${arraynama[key].substring(0, 35)}...</h5>
+                              <p class="card-text" style="color: #616161;text-align:justify">${arraydeskripsi[key].substring(0, 120)}...</p>
+                              <a href="readmore.html?id=${arrayid[key]}&c=rm" class="btn btn-primary" style="background-color: #5783DB;">Selengkapnya</a>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                    }
+                    } else {
+                    for (const key in arraynama){
+                        content.innerHTML += `
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img src="src/recommend/image${arrayid[key]}.png" class="card-img" style="" alt="gambar1">
+                            <div class="card-body">
+                              <h5 class="card-title">${arraynama[key].substring(0, 35)}...</h5>
+                              <p class="card-text" style="color: #616161;text-align:justify">${arraydeskripsi[key].substring(0, 120)}...</p>
+                              <a href="readmore.html?id=${arrayid[key]}&c=rm" class="btn btn-primary" style="background-color: #5783DB;">Selengkapnya</a>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                    }}
+                } else {
+                    pencariantidakditemukan()
+                    
+                }
+            }
+        })
+    }
+    readdb()
+        function readdb(){
+        const request = "readdbrm"; 
+        const content = document.getElementsByClassName('grid-card')[0]
+        $.ajax({
+            url : "connection.php",
+            type : "POST",
+            data : {
+                request : request,
+            },
+            success: function(response){
+                console.log(response)
+                let hasil = JSON.parse(response);
+                
+                if (hasil.status === "success"){
+                    refresh()
+                    pencarianditemukan()
+                    const arraynama = hasil["title"];
+                    const arraygambar = hasil["img"];                
+                    const arrayid = hasil["id"];
+                    const arraydeskripsi = hasil["sectiontop"];
+                    const content = document.getElementsByClassName('grid-card')[0]
+                    for (const key in arraynama){
+                      console.log(`${arraydeskripsi[key].substring(0.120)}`)
+                      content.innerHTML += `
+                        <div class="col-md-4 mb-3">
+                          <div class="card">
+                            <img src="src/recommend/image${arrayid[key]}.png" class="card-img" style="" alt="gambar1">
+                            <div class="card-body">
+                              <h5 class="card-title" style="">${arraynama[key].substring(0 , 35)}...</h5>
+                              <p class="card-text" style="color: #616161;text-align:justify">${arraydeskripsi[key].substring(0 , 120)}...</p>
+                              <a href="readmore.html?id=${arrayid[key]}&c=rm" class="btn btn-primary" style="background-color: #5783DB;">Selengkapnya</a>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                    }
+                } else {
+                    pencariantidakditemukan()
+                    
+                }
+            }
+        })
+    }
       var idhome = document.getElementById(
         "idhome"
       );
@@ -260,14 +295,14 @@
       );
       if (homeButtonWhenGotClickWil2) {
         homeButtonWhenGotClickWil2.addEventListener("click", function (e) {
-          window.location.href = "./help-page.html";
+          window.location.href = "./tentang-page.html";
         });
       }
       
       var menuLongCapsuleShape = document.getElementById("homeButtonWhenGotClickWil13");
       if (menuLongCapsuleShape) {
         menuLongCapsuleShape.addEventListener("click", function (e) {
-          window.location.href = "./help-page.html";
+          window.location.href = "./tentang-page.html";
         });
       }
       
