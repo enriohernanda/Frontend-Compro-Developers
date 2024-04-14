@@ -1,6 +1,17 @@
 .pb-2 {
   padding: 1vw;
 }
+.card{
+  padding: 1vw;
+  border-radius: 2vw;
+  min-width: 30vw;
+  box-shadow: 0 0.1vw 0 0 gray;
+}
+.card-img{
+  border-radius: 2vw;
+  width: 28vw;
+  height: 11vw;
+}
 .so-when-this21 {
   position: relative;
   display: inline-block;
