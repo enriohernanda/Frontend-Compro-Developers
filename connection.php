@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $id = $_POST["id"];
         $c = $_POST["c"];
         if ($c === "tr"){
-            $sql = "SELECT id, title ,img, sectiontop FROM table_trending WHERE id = $id";
+            $sql = "SELECT id, title ,img, sectiontop, sectionbottom FROM table_trending WHERE id = $id";
             $result = $conn -> query($sql);
             $data = array(); 
             if($result -> num_rows > 0){     
@@ -65,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     $response["title"][] = $row["title"] ;
                     $response["img"][] = $row["img"] ; 
                     $response["sectiontop"][] = $row["sectiontop"] ;
+                    $response["sectionbottom"][] = $row["sectionbottom"] ;
                 };
                 
             } else {
@@ -73,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             }
             echo json_encode($response);
         } else {
-        $sql = "SELECT id, title ,img, sectiontop FROM table_rekomend WHERE id = $id";
+        $sql = "SELECT id, title ,img, sectiontop, sectionbottom FROM table_rekomend WHERE id = $id";
         $result = $conn -> query($sql);
         $data = array(); 
         if($result -> num_rows > 0){     
@@ -83,6 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $response["title"][] = $row["title"] ;
                 $response["img"][] = $row["img"] ; 
                 $response["sectiontop"][] = $row["sectiontop"] ;
+                $response["sectionbottom"][] = $row["sectionbottom"] ;
             };
             
         } else {
@@ -170,5 +172,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $conn -> close();
 }
 
-// nutrisi : {"langkah1":"copy", "langkah2": "paste"}
 ?>
