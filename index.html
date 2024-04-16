@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Beranda</title>
+    <!-- Untuk membuat icon pada title -->
+    <link rel="icon" href="./public/image-24removebgpreview-1@2x.png" type="image/x-icon" />
     <!-- cdnjs CSS -->
     <link
       rel="stylesheet"
@@ -32,24 +34,22 @@
             <input class="selamat-datangsilakan-temukan" type="text" placeholder="Selamat Datang,silakan temukan yang anda minati!" />
           </div>
         </div>
-        <div class="search-engine" style="padding: 0vw;">
-          <div class="" style="height: fit-content; ">
-            <div class="" style="display: flex;padding-left: 1vw;padding: 0.3vw;align-items: center;">
-              <img class="vector-icon1" alt="" src="./public/icon-search.png" style="float: left;width: 3.5vw;height: auto;"/>
-              <input class="search-engine-child" style="font-size: 16px;color: black;width: 31.4vw;margin: 0%;float: right;" placeholder="Selamat datang! Temukan minat Anda!" type="text" />
-              <button id="search-button" style="background-color: rgba(255, 99, 71,1);padding: 1vw;border-radius: 1.2vw;border: none;width: 6vw;" onclick="button()">Cari</button>
+        <div class="search-engine" style="padding: 0vw">
+          <div class="" style="height: fit-content">
+            <div class="" style="display: flex; padding-left: 1vw; padding: 0.3vw; align-items: center">
+              <img class="vector-icon1" alt="" src="./public/icon-search.png" style="float: left; width: 3.5vw; height: auto" />
+              <input class="search-engine-child" style="font-size: 16px; color: black; width: 31.4vw; margin: 0%; float: right" placeholder="Selamat datang! Temukan minat Anda!" type="text" />
+              <button id="search-button" style="background-color: rgba(255, 99, 71, 1); padding: 1vw; border-radius: 1.2vw; border: none; width: 6vw" onclick="button()">Cari</button>
             </div>
-            <div id="found" style="display: none;">
-              <hr style="margin: 0%;">
-              <div id="option-search">
-                
-              </div>
+            <div id="found" style="display: none">
+              <hr style="margin: 0%" />
+              <div id="option-search"></div>
             </div>
           </div>
         </div>
         <img class="image-24-removebg-preview-1-icon" loading="lazy" alt="" src="./public/image-24removebgpreview-1@2x.png" />
 
-        <div class="menu-long-capsule-shape" style="min-width: fit-content;">
+        <div class="menu-long-capsule-shape" style="min-width: fit-content">
           <div class="home-button-when-got-click-wil">
             <b class="so-when-this">Beranda</b>
           </div>
@@ -94,96 +94,94 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+      var searchengine = document.getElementsByClassName('search-engine')[0];
+      var found = document.getElementById('found');
+      var optionsearch = document.getElementById('option-search');
+      var searchinput = document.getElementsByClassName('search-engine-child')[0];
 
-      var searchengine = document.getElementsByClassName("search-engine")[0]
-      var found = document.getElementById('found')
-      var optionsearch = document.getElementById("option-search") 
-      var searchinput = document.getElementsByClassName("search-engine-child")[0]
-
-      searchinput.addEventListener('keydown',function(){
-        if(event.keyCode === 13){
-          searchtitle()
+      searchinput.addEventListener('keydown', function () {
+        if (event.keyCode === 13) {
+          searchtitle();
         }
-      })
+      });
 
-      searchinput.addEventListener('blur',function(){
-        setTimeout(function(){
-          pencariantidakditemukan()
-        }, 250)
-      })
-      function button(){
-        setTimeout(function(){
-          searchtitle()
-        },260)
+      searchinput.addEventListener('blur', function () {
+        setTimeout(function () {
+          pencariantidakditemukan();
+        }, 250);
+      });
+      function button() {
+        setTimeout(function () {
+          searchtitle();
+        }, 260);
       }
-      searchinput.addEventListener('focus',function(){
-        searchtitle()
-      })
-      
-      function searchtitle(){
-        const request = "searchtittle";
-        const query = searchinput.value 
-        console.log(query)
-        if(query === ""){
-          refresh()
-          pencariantidakditemukan()
+      searchinput.addEventListener('focus', function () {
+        searchtitle();
+      });
+
+      function searchtitle() {
+        const request = 'searchtittle';
+        const query = searchinput.value;
+        console.log(query);
+        if (query === '') {
+          refresh();
+          pencariantidakditemukan();
         } else {
-        $.ajax({
-            url : "connection.php",
-            type : "POST",
-            data : {
-                request : request,
-                query : query
+          $.ajax({
+            url: 'connection.php',
+            type: 'POST',
+            data: {
+              request: request,
+              query: query,
             },
-            success: function(response){
-                console.log(response)
-                let hasil = JSON.parse(response);
-                
-                if (hasil.status === "success"){
-                    refresh()
-                    pencarianditemukan()
-                    const arraynama = hasil["title"];
-                    const arraycategory = hasil["category"];
-                    const arrayid = hasil["id"];
-                    let no = 0;
-                    let optionsearch = document.getElementById("option-search") 
-                    for (const key in arraynama){
-                      no += 1
-                      console.log(no)
-                      if (no > 5){
-                        break
-                      } else {
-                      optionsearch.innerHTML += `
+            success: function (response) {
+              console.log(response);
+              let hasil = JSON.parse(response);
+
+              if (hasil.status === 'success') {
+                refresh();
+                pencarianditemukan();
+                const arraynama = hasil['title'];
+                const arraycategory = hasil['category'];
+                const arrayid = hasil['id'];
+                let no = 0;
+                let optionsearch = document.getElementById('option-search');
+                for (const key in arraynama) {
+                  no += 1;
+                  console.log(no);
+                  if (no > 5) {
+                    break;
+                  } else {
+                    optionsearch.innerHTML += `
                       <ul style="margin: 0%;margin-bottom: 0vw;padding: 0%;padding: 0.5vw;background-color: hsla(60, 100%, 50%,0);border-top: 0vw solid rgba(0, 0, 0,0.3);">
                         <li style="list-style: none;padding: 0%;margin: 0%;background-color: hsla(300, 76%, 72%,0);text-align: left;display: flex;align-items: center;">
                           <img class="vector-icon1" alt="" src="./public/icon-search.png" style="float: left;width: 2vw;height: auto;"/> 
                           <a href="readmore.html?id=${arrayid[key]}&c=${arraycategory[key]}" style="text-decoration: none;">${arraynama[key].substring(0, 54)}</a> 
                         </li>
                       </ul> 
-                        `
-                    }}
-                } else {
-                    pencariantidakditemukan()
+                        `;
+                  }
                 }
-            }
-        })
-    }}
-    refresh()
-    function refresh(){
-      let optionsearch = document.getElementById("option-search") 
-      optionsearch.innerHTML = ""
-    }
-    function pencarianditemukan(){
-      var found = document.getElementById('found')
-      found.style.display = "block"
-    }
-    function pencariantidakditemukan(){
-      var found = document.getElementById('found')
-      found.style.display = "none"
-    }
-
-
-
+              } else {
+                pencariantidakditemukan();
+              }
+            },
+          });
+        }
+      }
+      refresh();
+      function refresh() {
+        let optionsearch = document.getElementById('option-search');
+        optionsearch.innerHTML = '';
+      }
+      function pencarianditemukan() {
+        var found = document.getElementById('found');
+        found.style.display = 'block';
+      }
+      function pencariantidakditemukan() {
+        var found = document.getElementById('found');
+        found.style.display = 'none';
+      }
 
       var homeButtonWhenGotClickWil0 = document.getElementById('homeButtonWhenGotClickWil0');
       if (homeButtonWhenGotClickWil0) {
@@ -214,5 +212,5 @@
       }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- </body>
+  </body>
 </html>
