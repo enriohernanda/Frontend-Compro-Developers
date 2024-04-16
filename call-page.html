@@ -98,6 +98,7 @@
                 </div>
               </div>
               <div class="cotet-parent">
+                <!-- Text Nama -->
                 <div class="cotet">
                   <div class="ifo"></div>
                   <b class="nama">Nama</b>
@@ -106,22 +107,28 @@
                     <img class="frame-child" loading="lazy" alt="" src="./public/vector-10.svg" />
                   </div>
                 </div>
+                <!-- End Text Nama -->
+
+                <!-- Text Email -->
                 <div class="cotet1">
                   <div class="ifo1"></div>
                   <b class="nama1">Email</b>
                   <div class="ketik-disini-group">
-                    <input type="text" class="ketik-disini" placeholder="Ketik disini" style="outline: none; border: none; background-color: transparent" />
+                    <input type="email" class="ketik-disini" placeholder="Ketik disini" style="outline: none; border: none; background-color: transparent" />
                     <img class="frame-item" loading="lazy" alt="" src="./public/vector-10.svg" />
                   </div>
                 </div>
+                <!-- End Text Email -->
+
               </div>
             </div>
+            <!-- Text Pesan -->
             <div class="frame-wrapper">
               <div class="cotet-group">
                 <div class="cotet2">
                   <div class="ifo2"></div>
                   <b class="nama2">Pesan Anda</b>
-                  <textarea name="" id="" class="ketik-disini" cols="30" rows="10" placeholder="Ketik disini" style="outline: none; border: none; background-color: transparent"></textarea>
+                  <textarea class="ketik-disini" cols="10" rows="0" placeholder="Ketik disini" style="outline: none; border: none; background-color: transparent"></textarea>
                   <img class="cotet-child" alt="" src="./public/vector-10.svg" />
                 </div>
                 <img class="frame-inner" loading="lazy" alt="" src="./public/vector-12.svg" />
@@ -137,10 +144,13 @@
                 <img class="frame-child5" loading="lazy" alt="" src="./public/vector-12.svg" />
               </div>
             </div>
+            <!-- End Text Pesan -->
           </div>
+
+          <!-- Button -->
           <div class="home-button-when-got-click-wil-container">
             <button class="home-button-when-got-click-wil13"
-              onclick="openPopup()" >Kirim</button>
+              onclick="openPopup()">Kirim</button>
               <div class="popup" id="popup">
                 <img src="img/tick.png" alt="">
                 <h2>Terima Kasih!</h2>
@@ -148,7 +158,7 @@
                 <button type="button" onclick="closePopup()">OK</button>
               </div>
              </div>
-            </button>
+             <!-- End Button -->
           </div>
         </div>
       </section>
@@ -205,17 +215,24 @@
         });
       }
 
-      // var menuLongCapsuleShape = document.getElementById("menuLongCapsuleShape");
-      // if (menuLongCapsuleShape) {
-      //   menuLongCapsuleShape.addEventListener("click", function (e) {
-      //     window.location.href = "./index.html";
-      //   });
-      // }
-
       var homeButtonWhenGotClickWil = document.getElementById('homeButtonWhenGotClickWil');
       if (homeButtonWhenGotClickWil) {
         homeButtonWhenGotClickWil.addEventListener('click', function (e) {
           window.location.href = './call-page.html';
+        });
+      }
+
+      // Untuk menghapus input saat menekan button kirim
+      var inputNama = document.querySelector('.cotet .ketik-disini');
+      var inputEmail = document.querySelector('.cotet1 .ketik-disini');
+      var inputPesan = document.querySelector('.cotet2 .ketik-disini');
+      var kirimButton = document.querySelector('.home-button-when-got-click-wil13');
+
+      if (kirimButton) {
+        kirimButton.addEventListener('click', function() {
+          inputNama.value = '';
+          inputEmail.value = '';
+          inputPesan.value = '';
         });
       }
     </script>
