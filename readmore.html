@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title"></title>
+    <title></title>
 
     <!-- cdnjs CSS -->
     <link
@@ -53,11 +53,12 @@
         <!-- frame -->
             <div class="wrapper">
               <div class="text-box">
-                <h2 class="d-flex align-items-stretch" style="margin-bottom: 5vw;" id="title">Kolaborasi Anak Muda dan Teknologi, Majukan Pariwisata</h2>
+                <div style="text-align: center;justify-content: center;display: flex;">
+                  <h2 class="d-flex align-items-stretch" style="text-align: center;margin-bottom: 5vw;" id="title">display</h2>
+                </div>
                 <img src="" id="img" style="padding-top: 0.5vw;" alt="Kolaborasi Anak Muda dan Teknologi, Majukan Pariwisata">
                 <p class="section" id="top-section" style="text-align: justify;margin: 0%;color: rgba(0, 0, 0, 0.75);margin-bottom: 0.4vw;"></p>
                 <p class="section" id="bottom-section" style="text-align: justify;margin: 0%;"></p>
-                   
               </div>
             </div>
             <!-- end frame -->
@@ -113,22 +114,28 @@ function checkparams(){
             console.log(response)
             let hasil = JSON.parse(response);
             if (hasil.status === "success"){
-                const texttitle = hasil["title"];
+              const texttitle = hasil["title"];
                 const srcimg = hasil["img"];
                 const id = hasil["id"];
                 const texttopsection = hasil["sectiontop"];
-                const textbottomsection = hasil["sectiontop"];
-                let title = document.getElementById("title")
+                const textbottomsection = hasil["sectionbottom"];
+                let titleid = document.getElementById("title")
                 let img = document.getElementById("img")
                 let topsection = document.getElementById("top-section")
                 let bottomsection = document.getElementById("bottom-section")
 
-                title.innerHTML = `${texttitle}`
+                titleid.innerHTML = `${texttitle}`
                 document.title = `${texttitle}`
                 topsection.innerHTML = `&nbsp&nbsp&nbsp&nbsp${texttopsection}`
                 bottomsection.innerHTML = `&nbsp&nbsp&nbsp&nbsp${textbottomsection}`
-                img.src = `src/recommend/image${id}.png` 
-                console.log(`src/recommend/image${id}.png`)
+                if (c === "rm"){
+                  img.src = `src/recommend/image${id}.png` 
+                  console.log("rekomend")
+                } 
+                if (c === "tr"){
+                  img.src = `src/trending/image${srcimg}.png` 
+                  console.log("trending")
+                }
             } else {
                 pencariantidakditemukan()
             }
