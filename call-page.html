@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width " />
     <title>Hubungi Kami</title>
+    <script defer src="app.js"></script>
 
     <!-- cdnjs CSS -->
     <link
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto Mono:wght@700&display=swap" />
   </head>
   <body>
+
     <div class="call-page">
       <section class="page-button">
         <img class="main-container-icon" alt="" src="./public/main-container@2x.png" />
@@ -43,7 +45,7 @@
                   <b class="so-when-this6">Trending</b>
                 </div>
                 <div class="home-button-when-got-click-wil8" id="homeButtonWhenGotClickWil3">
-                  <b class="so-when-this7">Bantuan</b>
+                  <b class="so-when-this7">Tentang Kami</b>
                 </div>
               </nav>
               <button class="home-button-when-got-click-wil9" id="homeButtonWhenGotClickWil">
@@ -118,8 +120,8 @@
               <div class="cotet-group">
                 <div class="cotet2">
                   <div class="ifo2"></div>
-                  <b class="nama2">Pesan anda</b>
-                  <textarea name="" id="" class="ketik-disini2" cols="30" rows="10" placeholder="Ketik disini" style="outline: none; border: none; background-color: transparent"></textarea>
+                  <b class="nama2">Pesan Anda</b>
+                  <textarea name="" id="" class="ketik-disini" cols="30" rows="10" placeholder="Ketik disini" style="outline: none; border: none; background-color: transparent"></textarea>
                   <img class="cotet-child" alt="" src="./public/vector-10.svg" />
                 </div>
                 <img class="frame-inner" loading="lazy" alt="" src="./public/vector-12.svg" />
@@ -137,13 +139,21 @@
             </div>
           </div>
           <div class="home-button-when-got-click-wil-container">
-            <button class="home-button-when-got-click-wil13">
-              <b class="so-when-this12">Kirim</b>
+            <button class="home-button-when-got-click-wil13"
+              onclick="openPopup()" >Kirim</button>
+              <div class="popup" id="popup">
+                <img src="img/tick.png" alt="">
+                <h2>Terima Kasih!</h2>
+                <p>Pesan Anda Sudah Terkirim.</p>
+                <button type="button" onclick="closePopup()">OK</button>
+              </div>
+             </div>
             </button>
           </div>
         </div>
       </section>
     </div>
+
     <!-- Footer -->
     <footer>
       <div class="footer-content">
@@ -191,7 +201,7 @@
       var homeButtonWhenGotClickWil3 = document.getElementById('homeButtonWhenGotClickWil3');
       if (homeButtonWhenGotClickWil3) {
         homeButtonWhenGotClickWil3.addEventListener('click', function (e) {
-          window.location.href = './help-page.html';
+          window.location.href = './tentang-page.html';
         });
       }
 
