@@ -129,7 +129,6 @@ function checkparams(){
                 titleid.innerHTML = `${texttitle}`
                 document.title = `${texttitle}`
                 topsection.innerHTML = `&nbsp&nbsp&nbsp&nbsp${texttopsection}`
-                bottomsection.innerHTML = `&nbsp&nbsp&nbsp&nbsp${textbottomsection}`
                 if (c === "rm"){
                   img.src = `src/recommend/image${id}.png` 
                   console.log("rekomend")
@@ -138,6 +137,30 @@ function checkparams(){
                   img.src = `src/trending/image${srcimg}.png` 
                   console.log("trending")
                 }
+                let stringtop = `${texttopsection}`
+                if (stringtop.includes("\r\n") === true){
+                  let arraysectiontop = stringtop.split("\r\n")
+                  for (const key in arraysectiontop){
+                    if (key == 0){
+                      topsection.innerHTML += `&nbsp&nbsp&nbsp&nbsp ${arraysectiontop[key]}`
+                    } else {
+                      topsection.innerHTML += `<br><br> &nbsp&nbsp&nbsp&nbsp${arraysectiontop[key]}`
+                    }
+                  }
+                }
+                let stringbottom = `${textbottomsection}`
+                if (stringbottom.includes("\r\n") === true){
+                  let arraysection = stringbottom.split("\r\n")
+                  for (const key in arraysection){
+                    console.log(arraysection[key])
+                    if (key == 0){
+                      bottomsection.innerHTML += `&nbsp&nbsp&nbsp&nbsp ${arraysection[key]}`
+                    } else {
+                      bottomsection.innerHTML += `<br><br>&nbsp&nbsp&nbsp${arraysection[key]}`
+                    }
+                  }
+                } 
+                
             } else {
                 pencariantidakditemukan()
             }
