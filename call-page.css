@@ -92,7 +92,7 @@
 .menu-long-capsule-shape1,
 .so-when-this8 {
   font-size: var(--font-size-sm);
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
   text-align: left;
 }
 .menu-long-capsule-shape1 {
@@ -301,7 +301,7 @@
   position: relative;
   font-size: var(--font-size-sm);
   display: inline-block;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
   color: var(--very-light-grey);
   text-align: left;
   min-width: 51px;
@@ -666,7 +666,7 @@
   text-align: center;
   font-size: 40px;
   color: var(--very-light-grey);
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
 }
 .call-page {
   width: 100%;
@@ -752,14 +752,14 @@ footer {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 3rem;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
 }
 .footer-content p {
   max-width: 500px;
   margin: 10px auto;
   line-height: 28px;
   font-size: 14px;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
 }
 .icon {
   list-style: none;
@@ -789,5 +789,5 @@ footer {
 .footer-bottom p {
   font-size: 14px;
   word-spacing: 2px;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
 }
