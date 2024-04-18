@@ -72,7 +72,7 @@
   position: relative;
   font-size: var(--font-size-sm);
   display: inline-block;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
   color: var(--very-light-grey);
   text-align: left;
   min-width: 68px;
@@ -123,7 +123,7 @@
   position: relative;
   font-size: var(--font-size-sm);
   display: inline-block;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
   color: var(--very-light-grey);
   text-align: left;
   min-width: 101px;
@@ -168,7 +168,7 @@
   justify-content: flex-start;
   padding: var(--padding-8xs) 0 0;
   box-sizing: border-box;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
   font-weight: 700;
   font-size: var(--font-size-sm);
   color: var(--color-darkgray);
@@ -768,7 +768,7 @@
   text-align: left;
   font-size: var(--font-size-sm);
   color: var(--txt);
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
 }
 .trending {
   width: 100%;
@@ -834,7 +834,7 @@ footer {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 3rem;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
 }
 
 .footer-content p {
@@ -842,7 +842,7 @@ footer {
   margin: 10px auto;
   line-height: 28px;
   font-size: 14px;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
 }
 
 .icon {
@@ -879,5 +879,5 @@ footer {
 .footer-bottom p {
   font-size: 14px;
   word-spacing: 2px;
-  font-family: var(--font-roboto-mono);
+  font-family: 'Poppins' ; font-weight : 600;
 }
